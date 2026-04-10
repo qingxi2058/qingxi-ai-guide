@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>清溪AI · AI小白起航导航站</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='82'%3E%F0%9F%8C%8A%3C/text%3E%3C/svg%3E">
 <style>
 :root {
   --primary: #6366f1;
@@ -137,24 +138,28 @@ body {
 
 /* ───── MY TOOLS SHOWCASE ───── */
 .showcase {
-  background: linear-gradient(145deg, #1e1b4b 0%, #2d1d7a 50%, #1a3366 100%);
+  background:
+    radial-gradient(circle at top right, rgba(129,140,248,0.28), transparent 36%),
+    linear-gradient(145deg, #28206d 0%, #3a2b8f 52%, #284f97 100%);
   border-radius: var(--r); padding: 32px; margin-top: 48px; margin-bottom: 0;
+  box-shadow: 0 20px 52px rgba(56, 38, 142, 0.18);
 }
 .showcase-hd { margin-bottom: 20px; }
 .showcase-hd .sc-label {
   font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
-  color: #a5b4fc; margin-bottom: 6px;
+  color: #c7d2fe; margin-bottom: 6px;
 }
 .showcase-hd h3 { font-size: 20px; font-weight: 900; color: white; margin-bottom: 4px; }
-.showcase-hd p { font-size: 13px; color: rgba(255,255,255,0.5); }
+.showcase-hd p { font-size: 13px; color: rgba(236,242,255,0.8); }
 .sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
 .sc-card {
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(129,140,248,0.2);
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(191,219,254,0.26);
   border-radius: 10px; padding: 14px 16px; text-decoration: none; color: white;
   display: block; transition: all 0.18s;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
 }
 .sc-card:hover {
-  background: rgba(99,102,241,0.22); border-color: rgba(129,140,248,0.5);
+  background: rgba(124,58,237,0.28); border-color: rgba(191,219,254,0.48);
   transform: translateY(-2px);
 }
 .sc-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
@@ -167,8 +172,8 @@ body {
 .sc-badge.new { background: rgba(6,182,212,0.2); color: #67e8f9; }
 .sc-badge.emo { background: rgba(236,72,153,0.2); color: #f9a8d4; }
 .sc-name { font-size: 13px; font-weight: 800; margin-bottom: 3px; }
-.sc-desc { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.45; margin-bottom: 8px; }
-.sc-link { font-size: 11px; font-weight: 700; color: #818cf8; }
+.sc-desc { font-size: 11px; color: rgba(236,242,255,0.74); line-height: 1.45; margin-bottom: 8px; }
+.sc-link { font-size: 11px; font-weight: 700; color: #bfdbfe; }
 
 /* ───── FILTERS ───── */
 .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -313,7 +318,9 @@ body {
 
 /* ───── FOOTER ───── */
 footer {
-  background: linear-gradient(145deg, #0f0a23, #1e1b4b);
+  background:
+    radial-gradient(circle at top right, rgba(99,102,241,0.22), transparent 32%),
+    linear-gradient(145deg, #171236 0%, #241d5a 55%, #1c2b63 100%);
   padding: 56px 24px 40px;
 }
 .footer-wrap { max-width: 1140px; margin: 0 auto; }
@@ -321,35 +328,41 @@ footer {
   display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 40px;
 }
 .fbrand h2 { font-size: 22px; font-weight: 900; color: white; margin-bottom: 10px; }
-.fbrand p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 320px; }
-.fcontact h3 { font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+.fbrand p { font-size: 14px; color: rgba(236,242,255,0.78); line-height: 1.7; max-width: 320px; }
+.fcontact {
+  padding: 20px 22px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(191,219,254,0.12);
+}
+.fcontact h3 { font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(224,231,255,0.72); margin-bottom: 16px; }
 .clist { display: flex; flex-direction: column; gap: 10px; }
 .citem {
   display: flex; align-items: center; gap: 10px; font-size: 13px;
-  color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.15s;
+  color: rgba(241,245,249,0.84); text-decoration: none; transition: color 0.15s;
 }
 .citem:hover { color: white; }
 .cicon {
-  width: 32px; height: 32px; border-radius: 8px; background: rgba(255,255,255,0.07);
+  width: 32px; height: 32px; border-radius: 8px; background: rgba(255,255,255,0.12);
   display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0;
 }
 .citem-copy {
   cursor: pointer; background: none; border: none; font-family: inherit;
   display: flex; align-items: center; gap: 10px; font-size: 13px;
-  color: rgba(255,255,255,0.6); transition: color 0.15s; padding: 0;
+  color: rgba(241,245,249,0.84); transition: color 0.15s; padding: 0;
 }
 .citem-copy:hover { color: white; }
 .wid {
   font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 5px;
-  background: rgba(99,102,241,0.3); color: #c7d2fe; margin-left: 2px;
+  background: rgba(129,140,248,0.44); color: #eef2ff; margin-left: 2px;
 }
-.copy-tip { font-size: 11px; color: #818cf8; margin-left: 4px; }
-.fdivider { height: 1px; background: rgba(255,255,255,0.07); margin: 32px 0 20px; }
+.copy-tip { font-size: 11px; color: #c7d2fe; margin-left: 4px; }
+.fdivider { height: 1px; background: rgba(255,255,255,0.12); margin: 32px 0 20px; }
 .fbot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.fbot p { font-size: 12px; color: rgba(255,255,255,0.25); }
+.fbot p { font-size: 12px; color: rgba(226,232,240,0.56); }
 .flinks { display: flex; gap: 16px; }
-.flink { font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.15s; }
-.flink:hover { color: rgba(255,255,255,0.7); }
+.flink { font-size: 12px; color: rgba(224,231,255,0.66); text-decoration: none; transition: color 0.15s; }
+.flink:hover { color: white; }
 
 /* ───── RESPONSIVE ───── */
 @media (max-width: 680px) {
@@ -383,7 +396,7 @@ footer {
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow"><i></i>小白AI学习导航站 · 持续更新</div>
-    <h1>学 AI 工具，<mark>从这里开始</mark><br>一页找完，不再幱刷</h1>
+    <h1>学 AI 工具，<mark>从这里开始</mark><br>一页找完，不再瞎刷</h1>
     <p class="hero-desc">清溪帮你从全网筛出最值得看的教程<br>豆包 · 即梦 · 可灵 · Claude Code · OpenClaw，小白直接用</p>
     <div class="hero-stats">
       <div class="stat"><div class="stat-n">50+</div><div class="stat-l">精选教程</div></div>
@@ -1005,7 +1018,8 @@ function go(id, btn) {
 function copyWechat(btn) {
   navigator.clipboard.writeText('qingxi20250501').then(() => {
     const tip = document.getElementById('ctip');
-    tip.textContent = '已复制 ✓'; tip.style.color: = #6ee7b7';
+    tip.textContent = '已复制 ✓';
+    tip.style.color = '#6ee7b7';
     setTimeout(() => { tip.textContent = '点击复制'; tip.style.color = ''; }, 2200);
   });
 }
