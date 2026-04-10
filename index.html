@@ -801,7 +801,7 @@ footer {
     <div class="rsec">
       <div class="rsec-title"><span>📖</span> 推荐书单</div>
       <div class="book-grid">
-        <a class="bcard" href="#" target="_blank">
+        <a class="bcard" href="https://search.douban.com/book/subject_search?search_text=AI+极简入门&cat=1001" target="_blank" rel="noopener">
           <div class="bcover" style="background:#fef9c3;">📘</div>
           <div class="binfo">
             <h4>《AI 极简入门》</h4>
@@ -817,7 +817,7 @@ footer {
             <div class="btags"><span class="btag">提示词</span><span class="btag free">完全免费</span></div>
           </div>
         </a>
-        <a class="bcard" href="#" target="_blank">
+        <a class="bcard" href="https://search.douban.com/book/subject_search?search_text=一人公司+Paul+Jarvis&cat=1001" target="_blank" rel="noopener">
           <div class="bcover" style="background:#fdf4ff;">🧠</div>
           <div class="binfo">
             <h4>《一人公司》（Paul Jarvis）</h4>
@@ -825,7 +825,7 @@ footer {
             <div class="btags"><span class="btag">变现思维</span><span class="btag">一人公司</span></div>
           </div>
         </a>
-        <a class="bcard" href="#" target="_blank">
+        <a class="bcard" href="https://search.douban.com/book/subject_search?search_text=深度工作+Cal+Newport&cat=1001" target="_blank" rel="noopener">
           <div class="bcover" style="background:#eff6ff;">💡</div>
           <div class="binfo">
             <h4>《深度工作》（Cal Newport）</h4>
@@ -963,6 +963,21 @@ let curP = 'all', curT = 'all';
 const pLbls = {bilibili:'🎬 B站',youtube:'📺 YouTube',douyin:'🎵 抖音',xiaohongshu:'📕 小红书',x:'🐦 X',zhihu:'💬 知乎',github:'💻 GitHub'};
 const dLbls = {beginner:'🟢 小白',intermediate:'🟡 进阶',advanced:'🔴 专业'};
 
+function resolveTutorialLink(t) {
+  if (t.link && t.link !== '#') return { url: t.link, fallback: false };
+  const q = encodeURIComponent(t.title);
+  const map = {
+    bilibili: `https://search.bilibili.com/all?keyword=${q}`,
+    youtube: `https://www.youtube.com/results?search_query=${q}`,
+    douyin: `https://www.douyin.com/search/${q}`,
+    xiaohongshu: `https://www.xiaohongshu.com/search_result?keyword=${q}&source=web_search_result_notes`,
+    x: `https://x.com/search?q=${q}&src=typed_query`,
+    zhihu: `https://www.zhihu.com/search?type=content&q=${q}`,
+    github: `https://github.com/search?q=${q}&type=repositories`,
+  };
+  return { url: map[t.platform] || `https://www.google.com/search?q=${q}`, fallback: true };
+}
+
 // ───── RENDER ─────
 function render() {
   const grid = document.getElementById('tgrid');
@@ -972,8 +987,10 @@ function render() {
   );
   if (!list.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
-  grid.innerHTML = list.map(t => `
-    <a class="tcard" href="${t.link}" target="_blank" rel="noopener">
+  grid.innerHTML = list.map(t => {
+    const resolved = resolveTutorialLink(t);
+    return `
+    <a class="tcard" href="${resolved.url}" target="_blank" rel="noopener">
       <div class="tcard-badges">
         <span class="pb pb-${t.platform}">${pLbls[t.platform]||t.platform}</span>
         <span class="db db-${t.difficulty}">${dLbls[t.difficulty]}</span>
@@ -981,8 +998,9 @@ function render() {
       <h3>${t.title}</h3>
       <div class="tcard-author">👤 ${t.author}</div>
       <div class="tcard-reason">💡 ${t.reason}</div>
-      <span class="tcard-cta">查看教程 →</span>
-    </a>`).join('');
+      <span class="tcard-cta">${resolved.fallback ? '查看相关结果 →' : '查看教程 →'}</span>
+    </a>`;
+  }).join('');
 }
 
 // ───── FILTER HANDLERS ─────
