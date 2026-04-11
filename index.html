@@ -399,7 +399,7 @@ footer {
     <h1>学 AI 工具，<mark>从这里开始</mark><br>一页找完，不再瞎刷</h1>
     <p class="hero-desc">清溪帮你从全网筛出最值得看的教程<br>豆包 · 即梦 · 可灵 · Claude Code · OpenClaw，小白直接用</p>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-n">50+</div><div class="stat-l">精选教程</div></div>
+      <div class="stat"><div class="stat-n">10+</div><div class="stat-l">已核对教程</div></div>
       <div class="stat"><div class="stat-n">6</div><div class="stat-l">主流AI工具</div></div>
       <div class="stat"><div class="stat-n">10+</div><div class="stat-l">清溪做的AI产品</div></div>
       <div class="stat"><div class="stat-n">10万+</div><div class="stat-l">赞与收藏</div></div>
@@ -530,8 +530,8 @@ footer {
         <h3>LLM 基础概念</h3>
         <p>Token、Context Window、Temperature 是什么？搞懂这些就不会再问"为什么 AI 忘了前面说的"</p>
         <div class="rlinks">
-          <a class="rlink" href="https://zhuanlan.zhihu.com/p/2009594401647769546" target="_blank">
-            <span class="rl">2026 最全 AI 应用学习路线图</span><span class="rt">知乎 · 免费</span>
+          <a class="rlink" href="https://news.qq.com/rain/a/20260224A01NH800" target="_blank">
+            <span class="rl">2026 AI 应用学习路线图（万字长文）</span><span class="rt">腾讯新闻 · 免费</span>
           </a>
           <a class="rlink" href="https://www.bilibili.com/video/BV1jEAaz3E6K/" target="_blank">
             <span class="rl">一个视频搞懂 AI 大模型原理</span><span class="rt">B站 · 免费</span>
@@ -619,11 +619,11 @@ footer {
           <p>场景化 Prompt 模板，写作/编程/分析/创意全覆盖，可直接复制使用</p>
           <div class="rtag">CSDN · 免费</div>
         </a>
-        <a class="rcard" href="https://zhuanlan.zhihu.com/p/1966827007120749525" target="_blank">
+        <a class="rcard" href="https://github.com/langgptai/awesome-doubao-prompts" target="_blank">
           <div class="rcard-icon">🗂</div>
-          <h4>提示词工程完全指南</h4>
-          <p>结构化提示词、角色扮演、高阶技巧一网打尽，从小白到高手</p>
-          <div class="rtag">知乎 · 免费</div>
+          <h4>豆包高质量 Prompt 合集</h4>
+          <p>更适合中文场景直接抄改，打开就是可用的提示词仓库，不再跳到文章风控页</p>
+          <div class="rtag">GitHub · 免费</div>
         </a>
         <a class="rcard" href="https://www.promptingguide.ai/zh" target="_blank">
           <div class="rcard-icon">🌐</div>
@@ -919,64 +919,22 @@ footer {
 <script>
 // ───── DATA ─────
 const tutorials = [
-  {tool:'doubao',platform:'bilibili',title:'豆包 Seedream 5.0 全网最全 AI 创意玩法，小白直接抄作业！',author:'网易订阅',link:'https://www.163.com/dy/article/KPQN6LEV05169CIL.html',difficulty:'beginner',reason:'最新版所有功能全覆盖，从文生图到 AI 编辑一条龙，真正适合零基础'},
-  {tool:'doubao',platform:'douyin',title:'10 分钟彻底学会豆包：5 个你不知道的高级用法',author:'AI效率圈',link:'#',difficulty:'beginner',reason:'抖音最高播放豆包教程，节奏快干货密，通勤路上刷一遍就够用'},
-  {tool:'doubao',platform:'xiaohongshu',title:'豆包 vs ChatGPT：中文场景谁更好用？实测对比',author:'AI测评师',link:'#',difficulty:'beginner',reason:'最接地气的对比测评，帮你决定该主用哪款 AI 助手，新人必看'},
-  {tool:'doubao',platform:'bilibili',title:'豆包智能体搭建全流程：从 0 创建你的专属 AI 助手',author:'B站UP主',link:'#',difficulty:'intermediate',reason:'进阶玩法，教你搭 AI 助手而不是只会用，含实际工作流案例'},
-  {tool:'jimeng',platform:'bilibili',title:'【全 30 集】即梦+豆包+剪映最强 AI 漫剧制作教程，小白 2 小时掌握',author:'B站创作者',link:'https://www.bilibili.com/video/BV1kDfXBNEN7/',difficulty:'beginner',reason:'全网最系统的即梦教程，30 集完整覆盖从入门到接单，学完能变现'},
-  {tool:'jimeng',platform:'zhihu',title:'即梦 AI 全攻略：功能解析、免费额度策略与充值指南',author:'知乎创作者',link:'https://zhuanlan.zhihu.com/p/2014430896900567800',difficulty:'beginner',reason:'把即梦所有功能讲透，特别是免费额度怎么最大化利用，省钱必看'},
-  {tool:'jimeng',platform:'xiaohongshu',title:'即梦 3.0 爆改！这 5 个 AI 绘画技巧让你出图质量翻倍',author:'即梦玩家',link:'#',difficulty:'intermediate',reason:'小红书最高收藏的即梦教程，Prompt 技巧实用，附赠模板合集'},
-  {tool:'jimeng',platform:'bilibili',title:'用即梦 30 分钟做完一期视频封面，我的完整工作流',author:'设计UP主',link:'#',difficulty:'intermediate',reason:'实战案例向，直接展示真实工作流，适合做内容的人参考'},
-  {tool:'kling',platform:'bilibili',title:'锐评 2026 年 AI 视频软件：可灵 vs 即梦 vs Sora，谁夯谁拉？',author:'B站科技区UP',link:'https://www.bilibili.com/video/BV1ncwczbEoy/',difficulty:'intermediate',reason:'最权威横评，帮你搞清楚 2026 年该选哪款 AI 视频工具，有数据有结论'},
-  {tool:'kling',platform:'youtube',title:'Kling AI Tutorial 2026: Complete Beginner Guide',author:'YouTube Creator',link:'#',difficulty:'beginner',reason:'英文最全可灵教程，画面演示清晰，适合想看英文资源的用户'},
-  {tool:'kling',platform:'douyin',title:'可灵 AI 出图太逼真？手把手教你 0 基础生成电影级视频',author:'短视频玩家',link:'#',difficulty:'beginner',reason:'抖音爆款，从注册到出第一个视频全程录屏，真正的零基础友好'},
-  {tool:'claudecode',platform:'bilibili',title:'🚀 Claude Cowork+Code 全面测试：6 大实战场景完整演示',author:'B站技术UP',link:'https://www.bilibili.com/video/BV1i6QBBcEW2/',difficulty:'intermediate',reason:'最新 Cowork 功能全面实测，6 个场景有画面有结论，进阶用户必看'},
-  {tool:'claudecode',platform:'bilibili',title:'Claude Code 深度分析：封号机制、18 个隐藏功能全揭秘',author:'技术博主',link:'https://www.bilibili.com/video/BV1Qt97BvEPd/',difficulty:'advanced',reason:'少有的深度技术内容，想真正搞懂 Claude Code 运行原理就看这个'},
-  {tool:'claudecode',platform:'github',title:'Claude Code × OpenClaw 中文完全教程（21 篇·13 万字）',author:'KimYx0207',link:'https://github.com/KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh',difficulty:'intermediate',reason:'中文最全的 Claude Code 文字教程，从零到企业实战，值得反复翻阅'},
-  {tool:'claudecode',platform:'youtube',title:'Claude Code Full Course 2026: Build an App in 1 Hour',author:'AI Dev Channel',link:'#',difficulty:'intermediate',reason:'英文教程里节奏最好的 Claude Code 课，跟着做完就能独立用 AI 开发'},
-  {tool:'openclaw',platform:'bilibili',title:'【保姆级】OpenClaw 全网最细教学：安装→Skills→多 Agent，1 小时全精通',author:'B站UP主',link:'https://www.bilibili.com/video/BV1TpAZzeEiZ/',difficulty:'beginner',reason:'公认 B 站最好的 OpenClaw 入门教程，手把手操作录屏，小白跟着做不会卡'},
-  {tool:'openclaw',platform:'bilibili',title:'一个视频搞懂 OpenClaw！原理+安装+实战一次讲完',author:'AI工具博主',link:'https://www.bilibili.com/video/BV1jEAaz3E6K/',difficulty:'beginner',reason:'30 分钟讲清楚来龙去脉，时间有限的人优先看这个'},
-  {tool:'openclaw',platform:'zhihu',title:'3 分钟 OpenClaw 接入 Claude/Codex，有手就行龙虾教程',author:'知乎博主',link:'https://zhuanlan.zhihu.com/p/2018110504799871940',difficulty:'beginner',reason:'最精简的接入教程，真的 3 分钟，已有基础想快速上手的人看这个'},
-  {tool:'openclaw',platform:'bilibili',title:'OpenClaw + Claude Code：一个人搭建完整 AI 开发团队',author:'开发者UP',link:'https://cloud.tencent.com/developer/article/2646044',difficulty:'intermediate',reason:'讲透多 Agent 协作逻辑，适合想用 OpenClaw 做自动化工作流的进阶用户'},
-  {tool:'openclaw',platform:'xiaohongshu',title:'打工人的 OpenClaw 自动化：我用它每天省下 3 小时',author:'效率博主',link:'#',difficulty:'beginner',reason:'非程序员视角，聚焦职场实际使用场景，最接地气的 OpenClaw 应用教程'},
-  {tool:'codex',platform:'zhihu',title:'3 分钟接入 Codex，AI 写代码效率快 10 倍',author:'知乎开发者',link:'https://zhuanlan.zhihu.com/p/2018110504799871940',difficulty:'intermediate',reason:'最简明的 Codex 接入指南，适合快速上手 AI 辅助编程'},
-  {tool:'codex',platform:'youtube',title:'Cursor AI: The Ultimate 2026 Beginner Guide',author:'Tech Youtuber',link:'#',difficulty:'beginner',reason:'Cursor 入门最受欢迎的英文教程，展示真实开发流程，评论区都说讲得清楚'},
-  {tool:'codex',platform:'bilibili',title:'Cursor vs Claude Code：2026 年 AI 编程工具哪个更强？',author:'程序员UP',link:'#',difficulty:'intermediate',reason:'最直接的横评，帮你决定该用 Cursor 还是 Claude Code，两者区别讲得很透'},
-  // 补充覆盖：小红书×豆包
-  {tool:'doubao',platform:'github',title:'Awesome Doubao Prompts：豆包高质量提示词合集',author:'langgptai',link:'https://github.com/langgptai/awesome-doubao-prompts',difficulty:'beginner',reason:'真实可打开的豆包提示词合集，适合先抄再改，快速上手中文场景'},
-  // 补充覆盖：YouTube×即梦
-  {tool:'jimeng',platform:'youtube',title:'Jimeng AI (Dreamina) Tutorial 2026: Full Beginner Guide',author:'AI Creator',link:'#',difficulty:'beginner',reason:'即梦英文最全入门教程，适合想看英文教程或做海外内容的创作者'},
-  // 补充覆盖：抖音×可灵
-  {tool:'kling',platform:'douyin',title:'可灵最新功能实测！这3个用法让视频秒变专业',author:'可灵玩家',link:'#',difficulty:'intermediate',reason:'抖音上更新最快的可灵教程，紧跟新功能，适合已入门想进阶的人'},
-  // 补充覆盖：小红书×Claude Code
-  {tool:'claudecode',platform:'xiaohongshu',title:'Claude Code 系列更新：从想法到页面工具实战',author:'清溪AI',link:'https://xhslink.com/m/15zyxo67w0J',difficulty:'beginner',reason:'真实可打开的小红书入口，适合先看中文实操分享，再跟着做自己的第一个小工具'},
-  // 补充覆盖：X×OpenClaw
-  {tool:'openclaw',platform:'github',title:'OpenClaw Runbook：从安装到稳定运行的实战手册',author:'digitalknk',link:'https://github.com/digitalknk/openclaw-runbook',difficulty:'intermediate',reason:'真实可打开的 OpenClaw 实战手册，重点是少踩坑、能跑起来，不是只讲概念'},
-  // 补充覆盖：抖音×即梦
-  {tool:'jimeng',platform:'bilibili',title:'【全 30 集】即梦+豆包+剪映最强 AI 漫剧制作教程',author:'B站创作者',link:'https://www.bilibili.com/video/BV1kDfXBNEN7/',difficulty:'beginner',reason:'真实可打开的系统教程，从入门到完整出片流程都有，适合小白一路跟做'},
-  // 补充覆盖：GitHub×豆包
-  {tool:'doubao',platform:'github',title:'doubao-free-api：豆包 API 接入参考项目',author:'LLM-Red-Team',link:'https://github.com/LLM-Red-Team/doubao-free-api',difficulty:'intermediate',reason:'真实可打开的豆包 API 参考项目，适合想继续往接入和二次开发走的人'},
+  {tool:'jimeng',platform:'bilibili',title:'【全 30 集】即梦+豆包+剪映最强 AI 漫剧制作教程，小白 2 小时掌握',author:'B站创作者',link:'https://www.bilibili.com/video/BV1kDfXBNEN7/',difficulty:'beginner',reason:'整套流程是单个视频入口，打开就是具体视频，不会跳到主页或搜索页'},
+  {tool:'kling',platform:'bilibili',title:'锐评 2026 年 AI 视频软件：可灵 vs 即梦 vs Sora，谁夯谁拉？',author:'B站科技区UP',link:'https://www.bilibili.com/video/BV1ncwczbEoy/',difficulty:'intermediate',reason:'直接打开就是单个 B 站视频，适合想先看横评的人'},
+  {tool:'claudecode',platform:'bilibili',title:'Claude Cowork+Code 全面测试：6 大实战场景完整演示',author:'B站技术UP',link:'https://www.bilibili.com/video/BV1i6QBBcEW2/',difficulty:'intermediate',reason:'直接打开单个视频，适合已经了解基础后继续往实战走的人'},
+  {tool:'claudecode',platform:'bilibili',title:'Claude Code 深度分析：封号机制、18 个隐藏功能全揭秘',author:'技术博主',link:'https://www.bilibili.com/video/BV1Qt97BvEPd/',difficulty:'advanced',reason:'偏进阶向，打开就是具体视频，不会落到频道主页'},
+  {tool:'claudecode',platform:'github',title:'Claude Code × OpenClaw 中文完全教程（21 篇·13 万字）',author:'KimYx0207',link:'https://github.com/KimYx0207/Claude-Code-x-OpenClaw-Guide-Zh',difficulty:'intermediate',reason:'这个本来就是 GitHub 教程仓库，目标页和卡片内容一致'},
+  {tool:'openclaw',platform:'bilibili',title:'【保姆级】OpenClaw 全网最细教学：安装→Skills→多 Agent，1 小时全精通',author:'B站UP主',link:'https://www.bilibili.com/video/BV1TpAZzeEiZ/',difficulty:'beginner',reason:'直接打开单个 B 站视频，适合第一次接触 OpenClaw 的人'},
+  {tool:'openclaw',platform:'bilibili',title:'一个视频搞懂 OpenClaw！原理+安装+实战一次讲完',author:'AI工具博主',link:'https://www.bilibili.com/video/BV1jEAaz3E6K/',difficulty:'beginner',reason:'单个视频入口，节奏更快，适合先快速建立整体理解'},
+  {tool:'doubao',platform:'github',title:'Awesome Doubao Prompts：豆包高质量提示词合集',author:'langgptai',link:'https://github.com/langgptai/awesome-doubao-prompts',difficulty:'beginner',reason:'这张卡片现在明确写成提示词合集，打开的是对应仓库，不会再和平台标签冲突'},
+  {tool:'openclaw',platform:'github',title:'OpenClaw Runbook：从安装到稳定运行的实战手册',author:'digitalknk',link:'https://github.com/digitalknk/openclaw-runbook',difficulty:'intermediate',reason:'这张卡片本质就是 runbook 手册，GitHub 仓库页是对的，不是误跳安装页'},
+  {tool:'doubao',platform:'github',title:'doubao-free-api：豆包 API 接入参考项目',author:'LLM-Red-Team',link:'https://github.com/LLM-Red-Team/doubao-free-api',difficulty:'intermediate',reason:'这张卡片现在明确写成参考项目，目标页就是对应代码仓库，语义一致'},
 ];
 
 // ───── STATE ─────
 let curP = 'all', curT = 'all';
 const pLbls = {bilibili:'🎬 B站',youtube:'📺 YouTube',douyin:'🎵 抖音',xiaohongshu:'📕 小红书',x:'🐦 X',zhihu:'💬 知乎',github:'💻 GitHub'};
 const dLbls = {beginner:'🟢 小白',intermediate:'🟡 进阶',advanced:'🔴 专业'};
-
-function resolveTutorialLink(t) {
-  if (t.link && t.link !== '#') return { url: t.link, fallback: false };
-  const q = encodeURIComponent(t.title);
-  const map = {
-    bilibili: `https://search.bilibili.com/all?keyword=${q}`,
-    youtube: `https://www.youtube.com/results?search_query=${q}`,
-    douyin: `https://www.douyin.com/search/${q}`,
-    xiaohongshu: `https://www.xiaohongshu.com/search_result?keyword=${q}&source=web_search_result_notes`,
-    x: `https://x.com/search?q=${q}&src=typed_query`,
-    zhihu: `https://www.zhihu.com/search?type=content&q=${q}`,
-    github: `https://github.com/search?q=${q}&type=repositories`,
-  };
-  return { url: map[t.platform] || `https://www.google.com/search?q=${q}`, fallback: true };
-}
 
 // ───── RENDER ─────
 function render() {
@@ -987,10 +945,8 @@ function render() {
   );
   if (!list.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
   empty.style.display = 'none';
-  grid.innerHTML = list.map(t => {
-    const resolved = resolveTutorialLink(t);
-    return `
-    <a class="tcard" href="${resolved.url}" target="_blank" rel="noopener">
+  grid.innerHTML = list.map(t => `
+    <a class="tcard" href="${t.link}" target="_blank" rel="noopener">
       <div class="tcard-badges">
         <span class="pb pb-${t.platform}">${pLbls[t.platform]||t.platform}</span>
         <span class="db db-${t.difficulty}">${dLbls[t.difficulty]}</span>
@@ -998,9 +954,8 @@ function render() {
       <h3>${t.title}</h3>
       <div class="tcard-author">👤 ${t.author}</div>
       <div class="tcard-reason">💡 ${t.reason}</div>
-      <span class="tcard-cta">${resolved.fallback ? '查看相关结果 →' : '查看教程 →'}</span>
-    </a>`;
-  }).join('');
+      <span class="tcard-cta">查看教程 →</span>
+    </a>`).join('');
 }
 
 // ───── FILTER HANDLERS ─────
