@@ -153,13 +153,12 @@ body {
 /* ───── MY TOOLS SHOWCASE ───── */
 .showcase {
   background:
-    radial-gradient(circle at 14% 18%, rgba(192, 132, 252, 0.18), transparent 24%),
-    radial-gradient(circle at 84% 18%, rgba(96, 165, 250, 0.24), transparent 28%),
-    radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.12), transparent 36%),
-    linear-gradient(145deg, #18153f 0%, #2a2267 44%, #284b88 100%);
+    radial-gradient(circle at top left, rgba(167, 139, 250, 0.10), transparent 28%),
+    radial-gradient(circle at top right, rgba(125, 211, 252, 0.12), transparent 30%),
+    linear-gradient(180deg, #f4f1ff 0%, #eef4ff 100%);
   border-radius: 22px; padding: 34px 32px 30px; margin-top: 48px; margin-bottom: 0;
-  border: 1px solid rgba(196, 181, 253, 0.22);
-  box-shadow: 0 28px 70px rgba(18, 16, 48, 0.28);
+  border: 1px solid #dde4f5;
+  box-shadow: 0 18px 42px rgba(99, 102, 241, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -168,8 +167,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(120deg, rgba(255,255,255,0.05), transparent 36%),
-    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 48%);
+    linear-gradient(120deg, rgba(255,255,255,0.36), transparent 36%),
+    linear-gradient(180deg, rgba(255,255,255,0.10), transparent 48%);
   pointer-events: none;
 }
 .showcase > * {
@@ -179,65 +178,57 @@ body {
 .showcase-hd { margin-bottom: 20px; }
 .showcase-hd .sc-label {
   font-size: 11px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
-  color: #c7d2fe; margin-bottom: 6px;
+  color: #5b5fc7; margin-bottom: 6px;
 }
-.showcase-hd h3 { font-size: 20px; font-weight: 900; color: white; margin-bottom: 4px; }
-.showcase-hd p { font-size: 13px; color: rgba(236,242,255,0.8); }
+.showcase-hd h3 { font-size: 20px; font-weight: 900; color: #172036; margin-bottom: 4px; }
+.showcase-hd p { font-size: 13px; color: #66748f; }
 .sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
 .sc-card {
-  --sc-bg-top: rgba(112, 118, 196, 0.20);
-  --sc-bg-bottom: rgba(82, 92, 168, 0.82);
-  --sc-border: rgba(191, 219, 254, 0.22);
-  --sc-link-color: #eef2ff;
-  background: linear-gradient(180deg, var(--sc-bg-top) 0%, var(--sc-bg-bottom) 100%);
+  --sc-accent: #7c3aed;
+  --sc-link-color: #4f46e5;
+  background: rgba(255,255,255,0.88);
   border: 1px solid var(--sc-border);
   border-radius: 16px; padding: 14px 16px; text-decoration: none; color: #18233f;
   display: block; transition: all 0.18s;
-  box-shadow: 0 12px 24px rgba(12, 20, 44, 0.12);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.05);
   position: relative;
   overflow: hidden;
 }
+.sc-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: var(--sc-accent);
+  opacity: 0.95;
+}
 .sc-card:hover {
-  border-color: rgba(191, 219, 254, 0.28);
+  border-color: #cfd9f2;
   transform: translateY(-3px);
-  box-shadow: 0 16px 30px rgba(13, 22, 48, 0.16);
+  box-shadow: 0 16px 28px rgba(99, 102, 241, 0.10);
 }
 .sc-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
 .sc-icon { font-size: 18px; }
 .sc-card--content {
-  --sc-bg-top: rgba(120, 128, 206, 0.20);
-  --sc-bg-bottom: rgba(82, 73, 164, 0.82);
-  --sc-border: rgba(196, 181, 253, 0.22);
-  --sc-link-color: #f5f3ff;
-  color: #f8f7ff;
+  --sc-accent: #8b5cf6;
+  --sc-border: #ddd6fe;
 }
 .sc-card--product {
-  --sc-bg-top: rgba(114, 145, 214, 0.20);
-  --sc-bg-bottom: rgba(70, 92, 172, 0.82);
-  --sc-border: rgba(147, 197, 253, 0.22);
-  --sc-link-color: #eff6ff;
-  color: #f5f9ff;
+  --sc-accent: #3b82f6;
+  --sc-border: #dbeafe;
 }
 .sc-card--tool {
-  --sc-bg-top: rgba(102, 150, 214, 0.20);
-  --sc-bg-bottom: rgba(58, 96, 158, 0.82);
-  --sc-border: rgba(125, 211, 252, 0.22);
-  --sc-link-color: #ecfeff;
-  color: #f2fbff;
+  --sc-accent: #06b6d4;
+  --sc-border: #d9f5fb;
 }
 .sc-card--emotion {
-  --sc-bg-top: rgba(126, 124, 206, 0.20);
-  --sc-bg-bottom: rgba(84, 74, 160, 0.82);
-  --sc-border: rgba(196, 181, 253, 0.22);
-  --sc-link-color: #f5f3ff;
-  color: #f7f5ff;
+  --sc-accent: #a855f7;
+  --sc-border: #eadbff;
 }
 .sc-card--feature {
-  --sc-bg-top: rgba(120, 138, 196, 0.20);
-  --sc-bg-bottom: rgba(82, 88, 156, 0.82);
-  --sc-border: rgba(191, 219, 254, 0.22);
-  --sc-link-color: #eff6ff;
-  color: #f8fbff;
+  --sc-accent: #64748b;
+  --sc-border: #dbe3ef;
 }
 .sc-badge {
   font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px;
@@ -246,11 +237,11 @@ body {
 .sc-badge.hot,
 .sc-badge.new,
 .sc-badge.emo {
-  background: rgba(255,255,255,0.14);
-  color: rgba(244,246,255,0.92);
+  background: #f2f4fb;
+  color: #6a7590;
 }
-.sc-name { font-size: 13px; font-weight: 800; margin-bottom: 3px; }
-.sc-desc { font-size: 11px; color: rgba(240, 244, 255, 0.82); line-height: 1.45; margin-bottom: 8px; }
+.sc-name { font-size: 13px; font-weight: 800; margin-bottom: 3px; color: #18233f; }
+.sc-desc { font-size: 11px; color: #66748f; line-height: 1.45; margin-bottom: 8px; }
 .sc-link { font-size: 11px; font-weight: 700; color: var(--sc-link-color); }
 
 /* ───── FILTERS ───── */
